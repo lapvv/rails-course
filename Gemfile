@@ -11,7 +11,7 @@ gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", "~> 1.4"
-gem "pg"
+# gem "pg"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -38,7 +38,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+# gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -70,4 +70,13 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "rails-controller-testing", "1.0.5"
+  gem "minitest",                 "5.15.0"
+  gem "minitest-reporters",       "1.5.0"
+  gem "guard",                    "2.18.0"
+  gem "guard-minitest",           "2.4.6"
+end
+
+group :production do
+  gem "pg"
 end
